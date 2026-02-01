@@ -13,7 +13,7 @@ import { LargeChatGateway } from './chat/largechat.gateway';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRoot(
-      'mongodb+srv://Serena:ndsvndsfnrhgyh@cluster0.fs0gtj1.mongodb.net/nest-chat?retryWrites=true&w=majority&appName=Cluster0',
+      `${process.env.MONGO_URL}`
     ),
     AuthModule,
     UserModule,
